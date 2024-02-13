@@ -16,8 +16,8 @@ boton.addEventListener("click", function(){
 function renderHTML(nDatos){
     var htmlString = "";
 
-    for(i = 0; i<nDatos.length; i++){
-        htmlString += "<p>" + nDatos[i].nombre + " " + nDatos[i].apellido + "</p>";
+    for(i = 0; i<nDatos.array.length; i++){ // nDatos.array.length conoce el tamaño del array en el json
+        htmlString += "<p>" + nDatos.array[i].nombre + " " + nDatos.array[i].apellido + "</p>";
     }
     empleadosContainer.innerHTML = htmlString;
 };

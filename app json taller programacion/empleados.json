@@ -1,11 +1,13 @@
-[
-    {
-        "nombre" : "Sebastian",
-        "apellido" : "Ravelo"
-    },
+{
+    "array" : [
+        {
+            "nombre" : "Sebastian",
+            "apellido" : "Ravelo"
+        },
 
-    {
-        "nombre" : "Alan",
-        "apellido" : "Vasquez"
-    }
-]   
+        {
+            "nombre" : "Alan",
+            "apellido" : "Vasquez"
+        }
+    ]   
+}
