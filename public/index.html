@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta name="view-port" content="width=device-width, initial-scale=1" />
+       
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <h1 class="text-center">JSON y AJAX</h1>
+
+        <div class="text-center">
+            <button id="boton" class="btn btn-warning" onclick="consultaDatosSqlNavegador()">Buscar información de registros</button>
+        </div> 
+ 
+        <section id="empleado-info" class="container">
+            <ul id="userList"></ul>
+        </section>
+    </body>
+</html>
+
+<!-- 
+CREATE database if not exists gestion;
+use gestion;
+create table if not exists users(
+	id mediumint not null auto_increment,
+    firstName varchar(32) not null,
+    lastName varchar(32) not null,
+    document varchar(16) not null,
+    address varchar(64) not null,
+    phone int(10) default null,
+    email varchar(32) default null,
+    primary key(id)
+) engine = InnoDB default charset = latin1;
+
+-- alter table users
+-- add unique document (document);
+
+select * from users;
+
+-- alter user 'root'@'localhost' identified with mysql_native_password by 'RootUmb'; -- Para que pueda acceder un usuario alterno a la BD
+-- insert into users (firstName, lastName, document, address, phone, email)
+-- values ("Sebas", "Ravelo", 321, "av 68 #68", 3131313, "sebas@correo.com")
+-->

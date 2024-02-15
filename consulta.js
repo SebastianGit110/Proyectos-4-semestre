@@ -5,7 +5,7 @@ const app = express()
 const conexion = mysql.createConnection({
     host : "localhost",
     user : "root",
-    password : "Rootumb",
+    password : "RootUmb",
     database : "gestion"
 });
 
@@ -22,10 +22,16 @@ app.get('/', function(req, resp){
         else{
             console.log('Consulta de la info de la tabla')
             console.log(rows)
-            resp.json(rows)
-            conexion.end()
+            resp.json(rows)           
+            conexion.end();
         }
     });
 });
 
-app.listen(1337)
+app.use(express.static('public')); // Tienen que correrse despues de la consulta porque si se hace antes, el html va a solicitar el mismo html
+// Hace los arcivos estaticos y se pueden acceder http://localhost:1337/index.html
+
+const PORT = 1337;
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
