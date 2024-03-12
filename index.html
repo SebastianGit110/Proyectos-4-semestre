@@ -3,20 +3,24 @@
         <meta name="view-port" content="width=device-width, initial-scale=1" />
        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <h1 class="text-center">JSON y AJAX</h1>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./mostrarDatos.js"></script>
+
+        <style>
+            
+        </style>
+
     </head>
     <body>
-       
+        <h1 class="text-center">Consulta a BD</h1>
+
         <div class="text-center">
-            <button id="boton" class="btn btn-warning">Buscar información de registros</button>
-        </div>
+            <button id="boton" class="btn btn-warning" onclick="consultaDatosSqlNavegador()">Buscar información de registros</button>
+        </div> 
  
         <section id="empleado-info" class="container">
-            <script src="script.js"></script>
-
+            <ul id="userList"></ul>
         </section>
-
-                
     </body>
 </html>
